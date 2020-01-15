@@ -28,8 +28,8 @@ func GetAge(min int, max int)(int) {
 func handler(httpReqs *prometheus.CounterVec) http.HandlerFunc {
     return func(w http.ResponseWriter, r *http.Request) {
         min := 0
-        max := 99990
-        age := GetAge(min, max)
+        max := 90
+         age := GetAge(min, max)
 
         fmt.Fprintf(w, "%d", age)
 
